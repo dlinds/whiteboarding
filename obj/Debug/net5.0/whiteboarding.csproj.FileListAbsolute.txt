@@ -1,0 +1,16 @@
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.exe
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.deps.json
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.runtimeconfig.json
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.runtimeconfig.dev.json
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.dll
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\ref\whiteboarding.dll
+C:\Users\DanielLindsey\Desktop\whiteboarding\bin\Debug\net5.0\whiteboarding.pdb
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.csproj.AssemblyReference.cache
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.AssemblyInfoInputs.cache
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.AssemblyInfo.cs
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.csproj.CoreCompileInputs.cache
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.dll
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\ref\whiteboarding.dll
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.pdb
+C:\Users\DanielLindsey\Desktop\whiteboarding\obj\Debug\net5.0\whiteboarding.genruntimeconfig.cache

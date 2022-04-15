@@ -9,7 +9,7 @@ Input: "Jasmine Ann Jones"
 Output: "Jasmine%20Ann%20Jones"
 
 
-
+// first try
 public static string GenerateURL (string input)
 {
   foreach(char letter in input)
@@ -19,4 +19,25 @@ public static string GenerateURL (string input)
       letter = "%20";
     }
   }
+  return input;
+}
+
+
+// solution that works in C#
+public static string GenerateURL(string input)
+{
+  string output = "";
+  foreach (char letter in input)
+  {
+
+    if (letter == ' ')
+    {
+      output += "%20";
+    }
+    else
+    {
+      output += letter;
+    }
+  }
+  return output;
 }
