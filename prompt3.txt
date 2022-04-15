@@ -30,4 +30,5 @@ public static string StringCompressor (string input)
       output += input[x];
     }
   }
+  return output;
 }
