@@ -32,3 +32,58 @@ public static string StringCompressor (string input)
   }
   return output;
 }
+
+
+
+function StringCompressor (input) {
+
+}
+
+
+// loop through each until no longer matching
+//
+
+count = 1
+a,
+a true, count = 2;
+a true, count = 3;
+b false, count = 3a, push to output 3a
+count = 1
+b,
+c false, count = 1, push to output b
+count = 1
+c,
+c true, count = 2;
+d false, count = 2c, push to output 2c
+count = 1
+d,
+d true, count = 2,
+d true, count = 3,
+d true, count = 4,
+a false, count = 4d, push to output 4d
+count = 1;
+a,
+end, push to output a
+
+
+function compressString (input) {
+  let output = "";
+  let arr = input.split("");
+  for (let x = 0; x < input.length; x++) {
+    let count = 1;
+    while (arr[x] == arr[x + count]) {
+      console.log(count);
+      count++;
+    }
+    if (count > 1) {
+      output += count + arr[x];
+      x += count-1;
+    } else {
+      output += arr[x];
+    }
+
+  }
+
+  return output;
+
+}
