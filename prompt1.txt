@@ -80,3 +80,31 @@ public static string GenerateURLRecursion(string input, string output = "", int 
   return GenerateURLRecursion(input, output, count);
 
 }
+
+
+//js
+
+function getURL (input) {
+  let output = "";
+  for (let x = 0; x < input.length; x++) {
+    if (input.charAt(x) === ' ') {
+      output += "%20";
+    } else {
+      output += input.charAt(x);
+    }
+  }
+  return output;
+}
+
+function getURL(input, count = 0, output = '') {
+  if (count === input.length) {
+    return output;
+  }
+  if (input.charAt(count) === ' ') {
+    output += "%20";
+  } else {
+    output += input.charAt(count);
+  }
+  count++;
+  return getURL (input, count, output);
+}
