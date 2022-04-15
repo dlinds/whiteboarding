@@ -16,3 +16,22 @@ function RemoveDuplicates (input) {
   });
   return output;
 }
+
+
+//without any built in functions
+function RemoveDuplicates (input) {
+  let output = [];
+  input.forEach(function(letter) {
+    let doesExist = false;
+    for (let x = 0; x < output.length; x++) {
+      if (output[x] === letter) {
+        doesExist = true;
+        break;
+      }
+    }
+    if (doesExist == false) {
+      output.push(letter);
+    }
+  });
+  return output;
+}
