@@ -41,3 +41,42 @@ public static string GenerateURL(string input)
   }
   return output;
 }
+
+//recursion test
+public static string GenerateURLRecursion (string input, string output = "", count = 0)
+{
+  if (count == input.length)
+  {
+    return output;
+  }
+  if (input[count] == ' ')
+  {
+    output += "%20";
+  }
+  else
+  {
+    output += input[count];
+    count++;
+    return GenerateURLRecursion (input, output, count);
+  }
+}
+
+//solution that works after building in C#
+public static string GenerateURLRecursion(string input, string output = "", int count = 0)
+{
+  if (count == input.Length)
+  {
+    return output;
+  }
+  if (input[count] == ' ')
+  {
+    output += "%20";
+  }
+  else
+  {
+    output += input[count];
+  }
+  count++;
+  return GenerateURLRecursion(input, output, count);
+
+}
