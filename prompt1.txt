@@ -96,7 +96,7 @@ function getURL (input) {
   return output;
 }
 
-function getURL(input, count = 0, output = '') {
+const getURL = (input, count = 0, output = '') => {
   if (count === input.length) {
     return output;
   }
@@ -107,4 +107,16 @@ function getURL(input, count = 0, output = '') {
   }
   count++;
   return getURL (input, count, output);
+}
+
+const getURL = (input, count = 0) => {
+  if (count === input.length) {
+    return input;
+  }
+  let arr = input.split("");
+  if (arr[count] === ' ') {
+    arr[count] = "%20";
+  }
+  count++;
+  return getURL(arr.join(""),count);
 }
