@@ -1,0 +1,66 @@
+Question #4: Checking for Uniqueness
+Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+Example
+Input: "hello"
+
+Output: false
+
+Input: "copyright"
+
+Output: true
+
+//attempted solution
+public static bool DuplicateLetterCheck (string input)
+{
+  bool output = false;
+  foreach (char letter in input)
+  {
+    for (int x = 0; x < input.Length; x++)
+    {
+      if (letter == input[x])
+      {
+        output = true;
+        break;
+      }
+    }
+  }
+  return output;
+}
+
+//working solution
+public static bool DuplicateLetterCheck(string input)
+{
+  bool output = true;
+  int count = 0;
+  foreach (char letter in input)
+  {
+    for (int x = count; x < input.Length - 1; x++)
+    {
+      if (letter == input[x + 1])
+      {
+        output = false;
+      }
+    }
+    count++;
+  }
+  return output;
+}
+
+//js without as array
+
+function duplicateCheck (input) {
+  let output = true;
+  for (let x = 0; x < input.length; x++) {
+    for (let y = x; y < input.length-1; y++) {
+      if (input.charAt(y+1) === input.charAt(x)) {
+        output = false;
+        break;
+      }
+    }
+    if (output === false) {
+      break;
+    }
+  }
+  return output;
+}
