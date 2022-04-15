@@ -10,8 +10,15 @@ namespace whiteboarding
       // string input = Console.ReadLine();
       // Console.WriteLine("Standard: " + GenerateURL(input));
       // Console.WriteLine("Recursively: " + GenerateURLRecursion(input));
-      Console.WriteLine("\n\n\n\nNow to compress a string");
-      Console.WriteLine("aaabccdddda Compressed: " + StringCompressor("aaabccdddda"));
+      // Console.WriteLine("\n\n\n\nNow to compress a string");
+      // Console.WriteLine("aaabccdddda Compressed: " + StringCompressor("aaabccdddda"));
+
+      Console.WriteLine("Input \"hello\": " + DuplicateLetterCheck("hello")); //false
+      Console.WriteLine("Input \"copywrite\": " + DuplicateLetterCheck("copywrite")); //true
+      Console.WriteLine("Input \"seventeen\": " + DuplicateLetterCheck("seventeen")); //false
+      Console.WriteLine("Input \"forty\": " + DuplicateLetterCheck("forty")); //true
+      Console.WriteLine("Input \"abcdefghijklmnop\": " + DuplicateLetterCheck("abcdefghijklmnop")); //true
+      Console.WriteLine("Input \"abcdefghijklmnopa\": " + DuplicateLetterCheck("abcdefghijklmnopa")); //false
 
     }
     public static string GenerateURL(string input)
@@ -76,6 +83,22 @@ namespace whiteboarding
       return output;
     }
 
-
+    public static bool DuplicateLetterCheck(string input)
+    {
+      bool output = true;
+      int count = 0;
+      foreach (char letter in input)
+      {
+        for (int x = count; x < input.Length - 1; x++)
+        {
+          if (letter == input[x + 1])
+          {
+            output = false;
+          }
+        }
+        count++;
+      }
+      return output;
+    }
   }
 }
