@@ -1,0 +1,82 @@
+Question #1: Turning Strings to URLs
+URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
+
+You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
+
+Example
+Input: "Jasmine Ann Jones"
+
+Output: "Jasmine%20Ann%20Jones"
+
+
+Jasmine Ann
+output = "";
+
+x = 0
+output = "J"
+
+x = 1
+output = "Ja"
+
+x = 7
+output = "Jasmine"
+
+x = 8
+output = "Jasmine%20"
+
+x = 9
+
+Input: "Jasmine Ann Jones"
+
+function replaceURL (input) {
+  if (typeof(input) != "string") {
+    return false;
+  }
+  let output = "";
+  for (let x = 0; x < input.length; x++) {   //x = 17
+    if (input.charAt(x) === ' ') {            //output = "Jasmine%20Ann%20Jones"
+      output += "%20";
+    } else {
+      output += input.charAt(x);
+    }
+  }
+  return output;
+}
+
+
+Input: "Jasmine Ann Jones"
+
+// input = string
+// count = int (0)
+
+
+// This is a string
+// T,h,i,s, ,a, ,s,t,r,i,n,g
+// T,h,i,s, ,a, ,s,t,r,i,n,g
+// T,h,i,s, ,a, ,s,t,r,i,n,g
+// T,h,i,s, ,a, ,s,t,r,i,n,g
+// T,h,i,s,%20,a, ,s,t,r,i,n,g
+// T,h,i,s,%20,a, ,s,t,r,i,n,g
+// T,h,i,s,%20,a,%20,s,t,r,i,n,g
+// T,h,i,s,%20,a,%20,s,t,r,i,n,g
+// T,h,i,s,%20,a,%20,s,t,r,i,n,g
+// T,h,i,s,%20,a,%20,s,t,r,i,n,g
+// T,h,i,s,%20,a,%20,s,t,r,i,n,g
+
+count++;
+return arr.join(""), count
+
+const replaceURLRecurse = (input, count = 0) =>
+  if (count === input.length) {
+    return input;
+  }
+
+  let arr = input.split("");    replaceURLRecurse("this is a string")
+                                //T,h,i,s,%20,a,%20,s,t,r,i,n,g
+
+  if (arr[count] === ' ') {
+    arr[count] = "%20";
+  }
+  count++;
+  return replaceURLRecurse(arr.join(""), count);
+}
